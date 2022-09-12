@@ -1,4 +1,6 @@
 /.idea/
 /spring-training-mine.iml
 /out/
+*.iml
+/spring-01-Core-IoC-Bean-Annotation/target/
 */target
