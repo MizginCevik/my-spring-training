@@ -1,6 +1,7 @@
 package com.cydeo.service;
 
 import com.cydeo.config.AppConfigData;
+import com.cydeo.config.DBConfigData;
 import com.cydeo.model.Comment;
 import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
@@ -18,12 +19,13 @@ public class CommentService {
     private final CommentRepository commentRepository; //always put here interface, because implementation can change
     private final CommentNotificationProxy commentNotificationProxy;
     private final AppConfigData appConfigData;
-
+    private final DBConfigData dbConfigData;
     //                                                       @Qualifier("emailCommentNotificationProxy")
-    public CommentService(CommentRepository commentRepository, @Qualifier("email") CommentNotificationProxy commentNotificationProxy, AppConfigData appConfigData) {
+    public CommentService(CommentRepository commentRepository, @Qualifier("email") CommentNotificationProxy commentNotificationProxy, AppConfigData appConfigData, DBConfigData dbConfigData) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
         this.appConfigData = appConfigData;
+        this.dbConfigData = dbConfigData;
     }
 
     public void publishComment(Comment comment){ //it is business logic
@@ -40,6 +42,11 @@ public class CommentService {
         System.out.println(appConfigData.getUserName());
         System.out.println(appConfigData.getPassword());
         System.out.println(appConfigData.getUrl());
+    }
 
+    public void printDbConfigData(){
+        System.out.println(dbConfigData.getUsername());
+        System.out.println(dbConfigData.getPassword());
+        System.out.println(dbConfigData.getType());
     }
 }
