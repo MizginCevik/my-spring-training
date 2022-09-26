@@ -4,6 +4,7 @@ import com.cydeo.model.Mentor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -26,10 +27,16 @@ public class MentorController {
         return "mentor/mentor-register";
     }
 
-    @PostMapping("/confirm")
-    public String submitForm(){
+    @PostMapping("/confirm")//(@ModelAttribute("mentor") Mentor mentor, Model model)
+    public String submitForm(@ModelAttribute("mentor") Mentor mentor){
 
-        return "mentor/mentor-confirmation";
+//        return "mentor/mentor-confirmation";
+
+//        model.addAttribute("mentor", new Mentor());
+
+//        return "mentor/mentor-register";
+
+        return "redirect:/mentor/register";
     }
 
 
