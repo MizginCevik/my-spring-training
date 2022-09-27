@@ -8,3 +8,15 @@
 mvnw.cmd
 mvnw
 /target/
+/spring-07-SpringBoot-Demo/.mvn/
+/spring-07-SpringBoot-Demo/.gitignore
+/spring-08-MVC-Controller/.mvn/
+/spring-08-MVC-Controller/.gitignore
+/spring-09-MVC-Model/.mvn/
+/spring-09-MVC-Model/.gitignore
+/spring-10-Thymeleaf/.mvn/
+/spring-10-Thymeleaf/.gitignore
+/spring-07-SpringBoot-Demo/src/test/
+/spring-08-MVC-Controller/src/test/
+/spring-09-MVC-Model/src/test/
+/spring-10-Thymeleaf/src/test/
