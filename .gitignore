@@ -20,3 +20,6 @@ mvnw
 /spring-08-MVC-Controller/src/test/
 /spring-09-MVC-Model/src/test/
 /spring-10-Thymeleaf/src/test/
+/spring-11-Data-TableCreation/.mvn/
+/spring-11-Data-TableCreation/src/test/
+/spring-11-Data-TableCreation/.gitignore
