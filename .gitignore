@@ -26,3 +26,6 @@ mvnw
 /spring-12-Data-Relationship/.mvn/
 /spring-12-Data-Relationship/src/test/
 /spring-12-Data-Relationship/.gitignore
+/spring-13-Data-CinemaLab/.mvn/
+/spring-13-Data-CinemaLab/src/test/
+/spring-13-Data-CinemaLab/.gitignore
