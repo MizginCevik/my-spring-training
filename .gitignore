@@ -23,3 +23,6 @@ mvnw
 /spring-11-Data-TableCreation/.mvn/
 /spring-11-Data-TableCreation/src/test/
 /spring-11-Data-TableCreation/.gitignore
+/spring-12-Data-Relationship/.mvn/
+/spring-12-Data-Relationship/src/test/
+/spring-12-Data-Relationship/.gitignore
