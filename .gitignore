@@ -29,3 +29,6 @@ mvnw
 /spring-13-Data-CinemaLab/.mvn/
 /spring-13-Data-CinemaLab/src/test/
 /spring-13-Data-CinemaLab/.gitignore
+/spring-14-Data-Queries/.mvn/
+/spring-14-Data-Queries/src/test/
+/spring-14-Data-Queries/.gitignore
