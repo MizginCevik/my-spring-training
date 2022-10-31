@@ -22,7 +22,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     Optional<Movie> findByName(String name);
 
     //Write a derived query to list all movies between a range of prices
-    List<Movie> findByPriceBetween(BigDecimal price1,BigDecimal price2);
+    List<Movie> findAllByPriceBetween(BigDecimal price1,BigDecimal price2);
 
     //Write a derived query to list all movies where duration exists in the specific list of duration
     List<Movie> findAllByDurationIn(List<Integer> durations);
@@ -51,7 +51,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     //Write a native query that return the list of movies in a specific range of prices
     @Query(value = "SELECT * FROM movie WHERE price BETWEEN ?1 AND ?2", nativeQuery = true)
-    List<Movie> retrieveAllBetweenPriceRange(@Param("price1") BigDecimal price1, @Param("price2") BigDecimal price2);
+    List<Movie> retrieveByPriceRange(@Param("price1") BigDecimal price1, @Param("price2") BigDecimal price2);
 
     //Write a native query to return all movies where duration exists in the range of duration
     @Query(value = "SELECT * FROM movie WHERE duration IN ?1", nativeQuery = true)

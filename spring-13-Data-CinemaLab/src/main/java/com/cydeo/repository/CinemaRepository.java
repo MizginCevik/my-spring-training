@@ -18,10 +18,10 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
     Optional<Cinema> findByName(String name);
 
     //Write a derived query to read sorted the top 3 cinemas that contains a specific sponsored name
-    List<Cinema> findTop3BySponsoredNameContainsOrderBySponsoredName(String sponsoredName);
+    List<Cinema> findFirst3BySponsoredNameContainingOrderBySponsoredName(String sponsoredName);
 
     //Write a derived query to list all cinemas in a specific country
-    List<Cinema> findByLocation_Country(String country);
+    List<Cinema> findByLocationCountry(String country);
 
     //Write a derived query to list all cinemas with a specific name or sponsored name
     List<Cinema> findByNameOrSponsoredName(String name, String sponsoredName);
@@ -30,7 +30,7 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
     //Write a JPQL query to read the cinema name with a specific id
     @Query("SELECT name FROM Cinema where id = ?1")
-    String retrieveCinemaById(Long id);
+    String fetchById(Long id);
 
     // ------------------- Native QUERIES ------------------- //
 

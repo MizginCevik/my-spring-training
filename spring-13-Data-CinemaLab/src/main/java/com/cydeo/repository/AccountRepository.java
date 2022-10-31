@@ -18,13 +18,13 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     List<Account> findAllByCountryOrState(String country, String state);
 
     //Write a derived query to list all accounts with age lower than or equal to a specific value
-    List<Account> findByAgeLessThanEqual(Integer age);
+    List<Account> findAllByAgeLessThanEqual(Integer age);
 
     //Write a derived query to list all accounts with a specific role
     List<Account> findByRole(UserRole role);
 
     //Write a derived query to list all accounts between a range of ages
-    List<Account> findByAgeBetween(Integer age1, Integer age2);
+    List<Account> findAllByAgeBetween(Integer age1, Integer age2);
 
     //Write a derived query to list all accounts where the beginning of the address contains the keyword
     List<Account> findByAddressStartingWith(String keyword);
@@ -36,15 +36,15 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
 
     //Write a JPQL query that returns all accounts
     @Query("SELECT a FROM Account a")
-    List<Account> retrieveAccounts();
+    List<Account> fetchAllByUsingJPQL();
 
     //Write a JPQL query to list all admin accounts
     @Query("SELECT a FROM Account a WHERE a.role = 'ADMIN'")
-    List<Account> retrieveAdminAccounts();
+    List<Account> fetchAdminAccounts();
 
     //Write a JPQL query to sort all accounts with age
     @Query("SELECT a FROM Account a ORDER BY a.age")
-    List<Account> retrieveAccountsBasedOnAge();
+    List<Account> fetchAllOrderBasedOnAge();
 
     // ------------------- Native QUERIES ------------------- //
 
