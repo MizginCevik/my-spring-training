@@ -1,8 +1,11 @@
 package com.cydeo.repository;
 
+import com.cydeo.entity.Cinema;
 import com.cydeo.entity.MovieCinema;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface MovieCinemaRepository extends JpaRepository<MovieCinema, Long> {
@@ -13,7 +16,7 @@ public interface MovieCinemaRepository extends JpaRepository<MovieCinema, Long> 
 
 
     //Write a derived query to count all movie cinemas with a specific cinema id
-
+    List<MovieCinema> findByCinema(Cinema cinema);
 
     //Write a derived query to count all movie cinemas with a specific movie id
 
