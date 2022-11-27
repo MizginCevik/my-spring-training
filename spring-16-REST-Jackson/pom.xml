@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0</version>
+        <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>spring-16-REST-Jackson</artifactId>
+    <artifactId>Spring-16-REST-Jackson</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-16-REST-Jackson</name>
-    <description>spring-16-REST-Jackson</description>
+    <name>Spring-16-REST-Jackson</name>
+    <description>Spring-16-REST-Jackson</description>
     <properties>
         <java.version>11</java.version>
     </properties>
