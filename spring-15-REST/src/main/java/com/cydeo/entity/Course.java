@@ -1,5 +1,6 @@
 package com.cydeo.entity;
 
+import javax.persistence.*;
 import lombok.Data;
 
 @Data
