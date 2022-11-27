@@ -35,3 +35,6 @@ mvnw
 /spring-15-REST/.mvn/
 /spring-15-REST/src/test/
 /spring-15-REST/.gitignore
+/spring-16-REST-Jackson/.mvn/
+/spring-16-REST-Jackson/src/test/
+/spring-16-REST-Jackson/.gitignore
