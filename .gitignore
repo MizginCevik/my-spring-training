@@ -32,3 +32,6 @@ mvnw
 /spring-14-Data-Queries/.mvn/
 /spring-14-Data-Queries/src/test/
 /spring-14-Data-Queries/.gitignore
+/spring-15-REST/.mvn/
+/spring-15-REST/src/test/
+/spring-15-REST/.gitignore
