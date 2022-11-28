@@ -38,3 +38,6 @@ mvnw
 /spring-16-REST-Jackson/.mvn/
 /spring-16-REST-Jackson/src/test/
 /spring-16-REST-Jackson/.gitignore
+/spring-17-REST-ConsumingApis/.mvn/
+/spring-17-REST-ConsumingApis/.gitignore
+/spring-17-REST-ConsumingApis/src/test/
