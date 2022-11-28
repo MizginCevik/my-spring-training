@@ -29,7 +29,7 @@ public class CourseController_ResponseEntity {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<CourseDTO> getCourseById(@PathVariable("id") long courseId) {
+    public ResponseEntity<CourseDTO> getCourseById(@PathVariable("id") Long courseId) {
         return ResponseEntity.ok(courseService.getCourseById(courseId));
     }
 
@@ -44,6 +44,16 @@ public class CourseController_ResponseEntity {
                 .status(HttpStatus.CREATED)
                 .header("Operation","Create")
                 .body(courseService.createCourse(course));
+    }
+
+    public ResponseEntity<Void> deleteCourseById(@PathVariable("id") Long courseId) {
+        courseService.deleteCourseById(courseId);
+        return ResponseEntity.noContent().build();
+    }
+
+    public ResponseEntity<Void> updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course) {
+        courseService.updateCourse(courseId,course);
+        return ResponseEntity.noContent().build();
     }
 
 }

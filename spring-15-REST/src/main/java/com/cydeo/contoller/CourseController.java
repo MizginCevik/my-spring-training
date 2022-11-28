@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController // = @Controller + @ResponseBody (you need to add the @ResponseBody for each endpoint)
 @RequestMapping("/courses/api/v1")
 public class CourseController {
 
@@ -33,7 +33,7 @@ public class CourseController {
     }
 
     @PostMapping
-    public CourseDTO createCourse(@RequestBody CourseDTO course) {
+    public CourseDTO createCourse(@RequestBody CourseDTO course) { // need to provide the object
         return courseService.createCourse(course);
     }
 
