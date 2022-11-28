@@ -32,20 +32,20 @@ public class Consume_RestTemplate { // consuming APIs
 
         String URL = URI + "/{id}";
 
-        return restTemplate.getForObject(URL,Object.class,id); // takes the URL and gives everything from there
+        return restTemplate.getForObject(URL, Object.class, id); // takes the URL and gives everything from there
         // id is needed to find out
     }
 
     @GetMapping("/test") // consume the API but it needs header
     public ResponseEntity<Object> consumePostFromDummyApi() {
 
-        HttpHeaders headers =new HttpHeaders();
+        HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.set("app-id","6298ebfecd0551211fce37a6");
+        headers.set("app-id", "6298ebfecd0551211fce37a6");
 
         HttpEntity<String> entity = new HttpEntity<>(headers); // header
 
-        return restTemplate.exchange("https://dummyapi.io/data/v1/user?limit=10",HttpMethod.GET,entity,Object.class);
+        return restTemplate.exchange("https://dummyapi.io/data/v1/user?limit=10", HttpMethod.GET, entity, Object.class);
     }
 
 }
