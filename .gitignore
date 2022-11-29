@@ -41,3 +41,6 @@ mvnw
 /spring-17-REST-ConsumingApis/.mvn/
 /spring-17-REST-ConsumingApis/.gitignore
 /spring-17-REST-ConsumingApis/src/test/
+/spring-18-REST-SchoolLab/.mvn/
+/spring-18-REST-SchoolLab/.gitignore
+/spring-18-REST-SchoolLab/src/test/
