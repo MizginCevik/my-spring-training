@@ -44,3 +44,6 @@ mvnw
 /spring-18-REST-SchoolLab/.mvn/
 /spring-18-REST-SchoolLab/.gitignore
 /spring-18-REST-SchoolLab/src/test/
+/spring-19-REST-OpenAPI3/src/test/
+/spring-19-REST-OpenAPI3/.mvn/
+/spring-19-REST-OpenAPI3/.gitignore
