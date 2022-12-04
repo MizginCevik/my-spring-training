@@ -47,3 +47,9 @@ mvnw
 /spring-19-REST-OpenAPI3/src/test/
 /spring-19-REST-OpenAPI3/.mvn/
 /spring-19-REST-OpenAPI3/.gitignore
+/spring-20-REST-Security-Keycloak-LicenseApp/.mvn/
+/spring-20-REST-Security-Keycloak-LicenseApp/src/test/
+/spring-20-REST-Security-Keycloak-LicenseApp/.gitignore
+/spring-20-REST-Security-Keycloak-OrganizationsApp/.mvn/
+/spring-20-REST-Security-Keycloak-OrganizationsApp/src/test/
+/spring-20-REST-Security-Keycloak-OrganizationsApp/.gitignore
