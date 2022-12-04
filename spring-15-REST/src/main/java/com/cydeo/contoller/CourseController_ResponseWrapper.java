@@ -22,7 +22,7 @@ public class CourseController_ResponseWrapper {
     @GetMapping
     public ResponseEntity<ResponseWrapper> getAllCourses() {
         return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
+                .status(HttpStatus.ACCEPTED) // any number can be passed as status .status(999)
                 .header("Version","Cydeo.V3")
                 .body(new ResponseWrapper("Courses successfully retrieved",courseService.getCourses()));
     }

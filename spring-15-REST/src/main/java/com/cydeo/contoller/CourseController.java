@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController // = @Controller + @ResponseBody (you need to add the @ResponseBody for each endpoint)
 @RequestMapping("/courses/api/v1")
-public class CourseController {
+public class CourseController { // API controller
 
     private final CourseService courseService;
 

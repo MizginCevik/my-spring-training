@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class AccountDTO {
 
     @JsonIgnore
-    private String name;
+    private String name; // to not see this field in response
     private String address;
     private String country;
     private String state;

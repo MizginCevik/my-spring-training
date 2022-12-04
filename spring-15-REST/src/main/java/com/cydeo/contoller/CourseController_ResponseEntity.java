@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/courses/api/v2")
-public class CourseController_ResponseEntity {
+public class CourseController_ResponseEntity { // manipulating responses
 
     private final CourseService courseService;
 
@@ -18,7 +18,7 @@ public class CourseController_ResponseEntity {
         this.courseService = courseService;
     }
 
-    // ResponseEntity is used to pass header, to modify API responses we are sending
+    // ResponseEntity is provided by Spring, used to pass header, to modify API responses we are sending
     @GetMapping
     public ResponseEntity<List<CourseDTO>> getAllCourses() {
         return ResponseEntity
@@ -30,7 +30,7 @@ public class CourseController_ResponseEntity {
 
     @GetMapping("{id}")
     public ResponseEntity<CourseDTO> getCourseById(@PathVariable("id") Long courseId) {
-        return ResponseEntity.ok(courseService.getCourseById(courseId));
+        return ResponseEntity.ok(courseService.getCourseById(courseId)); // ok -> returns 200 as status code and accepts body
     }
 
     @GetMapping("category/{name}")
@@ -46,11 +46,13 @@ public class CourseController_ResponseEntity {
                 .body(courseService.createCourse(course));
     }
 
-    public ResponseEntity<Void> deleteCourseById(@PathVariable("id") Long courseId) {
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteCourseById(@PathVariable("id") Long courseId) { // it can return ResponseEntity<CourseDTO>
         courseService.deleteCourseById(courseId);
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("{id}")
     public ResponseEntity<Void> updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course) {
         courseService.updateCourse(courseId,course);
         return ResponseEntity.noContent().build();
