@@ -23,12 +23,22 @@ public class Spring19RestOpenApi3Application {
     }
 
     @Bean
-    public OpenAPI customOpenApi() {
-        return new OpenAPI().info(new Info()
+    public OpenAPI customOpenApi() { // to change info and server parts
+        // you can pass info, servers, components, paths
+        return new OpenAPI()
+                .info(new Info()
                         .title("Cydeo Application OpenAPI")
                         .version("v1")
                         .description("Cydeo application API documentation"))
-                .servers(List.of(new Server().url("https://dev.cydeo.com").description("Dev Environment")));
+                .servers(List.of(new Server()
+                        .url("https://dev.cydeo.com")
+                        .description("Dev Environment")));
+// no need to add path because it's able to pick up endpoints and http methods in controller even not specified here
     }
 
 }
+/*
+info() accepts Info object, so then you can describe title, description, contact, version...
+servers() accepts List of servers
+you can find the details here: https://swagger.io/specification/
+ */
