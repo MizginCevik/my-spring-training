@@ -53,3 +53,6 @@ mvnw
 /spring-20-REST-Security-Keycloak-OrganizationsApp/.mvn/
 /spring-20-REST-Security-Keycloak-OrganizationsApp/src/test/
 /spring-20-REST-Security-Keycloak-OrganizationsApp/.gitignore
+/spring-21-AOP/.mvn/
+/spring-21-AOP/src/test/
+/spring-21-AOP/.gitignore
