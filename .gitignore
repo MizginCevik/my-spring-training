@@ -56,3 +56,5 @@ mvnw
 /spring-21-AOP/.mvn/
 /spring-21-AOP/src/test/
 /spring-21-AOP/.gitignore
+/spring-23-UnitTesting-Mockito/.mvn/
+/spring-23-UnitTesting-Mockito/.gitignore
